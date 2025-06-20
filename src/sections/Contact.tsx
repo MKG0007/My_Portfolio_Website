@@ -1,3 +1,4 @@
+import emailjs from 'emailjs-com';
 import React, { useState, FormEvent } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { Mail, Phone, MapPin, Send, Github as GitHub, Linkedin } from 'lucide-react';
@@ -38,35 +39,44 @@ const Contact: React.FC = () => {
   };
 
   const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    try {
-      // In a real implementation, you would send the form data to your backend
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      setSubmitStatus({
-        success: true,
-        message: 'Thank you! Your message has been sent successfully.'
-      });
-      
-      // Reset form data
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      });
-    } catch (error) {
-      setSubmitStatus({
-        success: false,
-        message: 'Oops! Something went wrong. Please try again later.'
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+  e.preventDefault();
+  setIsSubmitting(true);
+
+  try {
+    await emailjs.send(
+      'service_mmnnk7t',
+      'template_28sg1o5',
+      {
+        name: formData.name,
+        email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+      },
+      'OqjSme7R7lGzlCcWm'
+    );
+
+    setSubmitStatus({
+      success: true,
+      message: 'Thank you! Your message has been sent successfully.'
+    });
+
+    setFormData({
+      name: '',
+      email: '',
+      subject: '',
+      message: ''
+    });
+  } catch (error) {
+    console.error('EmailJS Error:', error);
+    setSubmitStatus({
+      success: false,
+      message: 'Oops! Something went wrong. Please try again later.'
+    });
+  } finally {
+    setIsSubmitting(false);
+  }
+};
+
 
   return (
     <section id="contact" className="py-20 bg-white dark:bg-gray-900">

@@ -16,9 +16,12 @@ html {
   scrollbar-color: var(--primary) #CBD5E1;
 }
 
-body {
-  font-family: 'Inter', sans-serif;
-  @apply text-gray-800 dark:text-gray-200 bg-white dark:bg-gray-900;
+/* Fix: use @layer base to apply Tailwind utilities inside body */
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    @apply text-gray-800 dark:text-gray-200 bg-white dark:bg-gray-900;
+  }
 }
 
 /* Custom scrollbar for webkit browsers */
@@ -69,15 +72,15 @@ body {
   .btn-primary {
     @apply px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300;
   }
-  
+
   .btn-outline {
     @apply px-6 py-3 border border-blue-600 text-blue-600 dark:text-blue-400 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/30 transition duration-300;
   }
-  
+
   .section-padding {
     @apply py-20;
   }
-  
+
   .container-padding {
     @apply px-4 sm:px-6 lg:px-8;
   }

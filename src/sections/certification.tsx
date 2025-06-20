@@ -22,11 +22,35 @@ const certifications = [
   },
   {
     id: 3,
+    title: "Prompt Engineering for ChatGPT",
+    issuer: "Vanderbilt University | Coursera",
+    date: "Jan 24",
+    link: "https://www.coursera.org/account/accomplishments/verify/BT8T6PZ7MDAW",
+    image: "assets/cert_promt.png"
+  },
+  {
+    id: 4,
+    title: "Introduction to Large Language Models",
+    issuer: "Google Cloud | Coursera",
+    date: "Jan 24",
+    link: "https://www.coursera.org/account/accomplishments/verify/CE5E65CGSUNX",
+    image: "assets/cert_introllm.png"
+  },
+  {
+    id: 5,
     title: "The Bits and Bytes of Computer Networking",
     issuer: "Google | Coursera",
     date: "Nov 23",
     link: "https://www.coursera.org/account/accomplishments/verify/PN6CNA7EYKQV",
     image: "assets/cert_networking.png"
+  },
+  {
+    id: 6,
+    title: "Leadership Through Social Influence",
+    issuer: "Northwestern University | Coursera",
+    date: "Mar 23",
+    link: "https://www.coursera.org/account/accomplishments/verify/8GS37TJ9JM6A",
+    image: "assets/cert_social.png"
   }
 ];
 
