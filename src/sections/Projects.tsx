@@ -15,8 +15,18 @@ interface ProjectType {
 }
 
 const projects: ProjectType[] = [
-  {
+    {
     id: 1,
+    title: "FlickTales - Movie Blogging Website",
+    description: "Designed and developed a dynamic movie blogging platform featuring detailed movie reviews, category filters, and a responsive modern UI. Built using React and Tailwind CSS with smooth animations, and deployed seamlessly on Vercel.",
+    image: "assets/flicktales.png",
+    tags: ["React", "Tailwind CSS", "JavaScript", "Framer Motion", "Vercel"],
+    github: "https://github.com/MKG0007/flicktales-cinema-blog",
+    demo: "https://flicktales-cinema-blog.vercel.app",
+    featured: true
+  },
+  {
+    id: 2,
     title: "Car Rental System",
     description: "Built a fully responsive Car Rental Website using HTML, CSS, and JavaScript with a clean, user-friendly interface. Integrated full dark mode support for enhanced accessibility and user preference, and deployed the site using GitHub Pages.",
     image: "assets/car_rental.png",
@@ -26,7 +36,7 @@ const projects: ProjectType[] = [
     featured: true
   },
   {
-    id: 2,
+    id: 3,
     title: "Text Editor",
     description: "A browser-based text editor with syntax highlighting, autosave functionality, and markdown support for developers and writers.",
     image: "https://images.pexels.com/photos/3243/pen-calendar-to-do-checklist.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -36,7 +46,7 @@ const projects: ProjectType[] = [
     featured: true
   },
   {
-    id: 3,
+    id: 4,
     title: "Portfolio Website",
     description: "A responsive portfolio website built with React and Tailwind CSS, featuring dark mode, animations, and contact form integration.",
     image: "/assets/follio.png",
@@ -46,7 +56,7 @@ const projects: ProjectType[] = [
     featured: true
   },
   {
-    id: 4,  
+    id: 5,  
     title: "Simon Says Game",
     description: "Developed a secure MERN authentication system with Next.js frontend integration, featuring two-factor authentication, email verification, Nodemailer integration, and robust user authorization using JWT, cookies, and sessions.",
     image: "/assets/simon.png",
@@ -56,7 +66,7 @@ const projects: ProjectType[] = [
     featured: true
   },
   {
-    id: 5,
+    id: 6,
     title: "Online Wallpaper Website",
     description: "a responsive Wallpaper Website using HTML, CSS, and JavaScript to showcase high-quality background images. Deployed the project on GitHub Pages with smooth UI, interactive categories, and mobile-friendly design.",
     image: "/assets/web_wallpaper.png",
