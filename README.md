@@ -28,8 +28,8 @@ Welcome to my personal portfolio website! This is a digital representation of my
 
 ## 📌 Live Demo
 
-🔗 **Live Website:** [Visit My Portfolio](https://mayankkg.vercel.app)  
-📁 **GitHub Repository:** [Source Code](https://github.com/MKG0007/My_Portfolio_Website)
+🔗 **Live Website:** https://mayankkg.vercel.app  
+📁 **GitHub Repository:** https://github.com/MKG0007/My_Portfolio_Website
 
 ---
 
@@ -46,8 +46,8 @@ Welcome to my personal portfolio website! This is a digital representation of my
 Feel free to reach out to me:
 
 - 📧 Email: mg258087@gmail.com  
-- 💼 LinkedIn: [Your LinkedIn](https://www.linkedin.com/in/mayankgupta30/)  
-- 🐙 GitHub: [Your GitHub](https://github.com/MKG0007)
+- 💼 LinkedIn: https://www.linkedin.com/in/mayankgupta30 
+- 🐙 GitHub: https://github.com/MKG0007
 
 ---
 
