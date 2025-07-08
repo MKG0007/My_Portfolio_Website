@@ -142,7 +142,7 @@ const Experience: React.FC = () => {
 
                   {exp.company === "" && (
                     <a
-                      href="https://github.com/MKG0007/Text_Editor_lite"
+                      href="https://github.com/MKG0007/Text_Editor"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-block mt-4 text-blue-600 dark:text-blue-400 hover:underline"
