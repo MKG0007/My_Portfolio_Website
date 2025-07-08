@@ -15,27 +15,28 @@ interface ExperienceItem {
 const experiences: ExperienceItem[] = [
   {
     id: 1,
-    role: "Simon Says Game",
-    company: "Memory Game App",
+    role: "Movie Blogging Platform",
+    company: "Blogging Website",
     location: "",
-    period: "April 25",
+    period: "May 25",
     description: [
-      "Built an interactive Simon Says game using HTML, CSS, and JavaScript.",
-      "Implemented real-time input validation with sound and visual feedback.",
-      "Designed a responsive layout for consistent mobile and desktop play.",
-      "Deployed on GitHub Pages with version control via GitHub integration."
+      "Built a responsive movie blogging platform featuring animated hero sections, reviews, and team showcases.",
+      "Integrated Framer Motion and OGL.js to deliver smooth UI transitions and custom circular gallery animations.",
+      "Implemented dark mode support and mobile responsiveness to enhance UX across all devices.",
+      "Added secure contact functionality using EmailJS, enabling users to reach out directly from the site."
     ]
   },
   {
     id: 2,
-    role: "Rental Website",
-    company: "Car Rental System",
+    role: "Personal Portfolio Website",
+    company: "Portfolio Website",
     location: "",
-    period: "July 24",
+    period: "Feb 25",
     description: [
-      "Built a car rental website using HTML, CSS, Bootstrap, and JavaScript.",
-      "Created sections like featured cars, testimonials, and booking CTA.",
-      "Implemented a full dark mode toggle for better UX and accessibility.",
+      "Built a fast, animated portfolio to showcase skills, experience, and projects with smooth navigation.",
+      "Integrated a contact form using EmailJS to enable real-time message sending without a backend server.",
+      "Achieved full responsiveness and dark mode compatibility, ensuring consistent user experience across all devices.",
+      "Optimized for speed and SEO with fast load times and clean semantic structure, improving recruiter engagement."
     ]
   },
   {
@@ -117,9 +118,9 @@ const Experience: React.FC = () => {
                     ))}
                   </ul>
 
-                  {exp.company === "Memory Game App" && (
+                  {exp.company === "Blogging Website" && (
                     <a
-                      href="https://github.com/MKG0007/Simon_Says_Game"
+                      href="https://github.com/MKG0007/flicktales-cinema-blog"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-block mt-4 text-blue-600 dark:text-blue-400 hover:underline"
@@ -128,9 +129,9 @@ const Experience: React.FC = () => {
                     </a>
                   )}
 
-                  {exp.company === "Car Rental System" && (
+                  {exp.company === "Portfolio Website" && (
                     <a
-                      href="https://github.com/MKG0007/CarRental"
+                      href="https://github.com/MKG0007/My_Portfolio_Website"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-block mt-4 text-blue-600 dark:text-blue-400 hover:underline"
