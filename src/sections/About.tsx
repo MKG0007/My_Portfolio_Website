@@ -67,7 +67,11 @@ const About: React.FC = () => {
               {[
                 { label: "Location", value: "Punjab, India" },
                 { label: "Email", value: "mg258087@gmail.com" },
-                { label: "Freelance", value: "Available", color: "text-green-500 dark:text-green-400" },
+                {
+                  label: "Freelance",
+                  value: "Available",
+                  color: "text-green-500 dark:text-green-400",
+                },
                 { label: "Languages", value: "English, Hindi" },
               ].map((item, idx) => (
                 <div
@@ -78,7 +82,7 @@ const About: React.FC = () => {
                     {item.label}
                   </h4>
                   <p
-                    className={`text-base font-semibold text-gray-900 dark:text-white ${
+                    className={`text-base font-semibold text-gray-900 dark:text-white break-words sm:break-normal ${
                       item.color || ""
                     }`}
                   >
