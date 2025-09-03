@@ -1,59 +1,51 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
-import { Calendar, MapPin, Briefcase } from 'lucide-react';
+import { Calendar, Users, Code, GraduationCap } from 'lucide-react';
 import SectionTitle from '../components/SectionTitle';
 
-interface ProjectItem {
+interface ExperienceItem {
   id: number;
-  name: string;            // Project name
-  period: string;          // e.g., "Jun 2025 – Aug 2025"
-  tech: string[];          // badges
-  bullets: string[];       // highlights
-  live?: string;           // live url
-  github?: string;         // repo url
-  location?: string;       // optional
+  title: string;         // Role / Activity
+  period: string;        // e.g., "2023 – Present"
+  bullets: string[];     // Highlights
 }
 
-const projects: ProjectItem[] = [
+const experiences: ExperienceItem[] = [
   {
     id: 1,
-    name: 'AI Trip Planner',
-    period: 'Jun 2025 – Aug 2025',
-    tech: ['React.js', 'Next.js', 'Tailwind CSS', 'Gemini API', 'Mapbox', 'Convex', 'Clerk', 'Vercel'],
+    title: 'Problem Solving & Competitive Programming',
+    period: '2022 – Present',
     bullets: [
-      'AI-driven trip planner generating personalized itineraries tailored to user preferences.',
-      'Used Gemini API for intelligent destination, activity, and schedule recommendations.',
-      'Integrated Mapbox for interactive maps, routes, and location-based exploration.',
-      'Implemented Convex for data management and Clerk for secure auth.',
+      'Solved 400+ Data Structures & Algorithms problems across LeetCode and GeeksforGeeks.',
+      'Strengthened algorithmic thinking, dynamic programming, and system design fundamentals.',
     ],
-    live: 'https://wayquestai.vercel.app',
-    github: 'https://github.com/MKG0007/Ai-Trip-Planner',
   },
   {
     id: 2,
-    name: 'E-commerce Platform',
-    period: 'Feb 2025 – Mar 2025',
-    tech: ['React.js', 'Redux Toolkit', 'Node.js', 'Express.js', 'MongoDB', 'Vercel'],
+    title: 'Skill Showcase Fest – Team Coordinator',
+    period: '2023',
     bullets: [
-      'Scalable full-stack app with browsing, cart, checkout, and auth workflows.',
-      'Designed REST API with 15+ endpoints for products, users, orders, and transactions.',
-      'Optimized performance and responsiveness across devices; centralized state via Redux Toolkit.',
+      'Coordinated a student team to ensure smooth execution of events.',
+      'Fostered collaboration and problem-solving among participants.',
     ],
-    live: 'https://swiftcarttt.vercel.app',
-    github: 'https://github.com/MKG0007/ecommerce-website',
   },
   {
     id: 3,
-    name: 'Movie Blogging Platform',
-    period: 'Nov 2024 – Dec 2024',
-    tech: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'OGL (WebGL)', 'EmailJS'],
+    title: 'Hackathon – BlockBash',
+    period: '2024',
     bullets: [
-      'Responsive blogging platform with dynamic movie reviews and intuitive navigation.',
-      '3D hero and gallery with OGL (WebGL); micro-interactions via Framer Motion.',
-      'Serverless contact with EmailJS for instant communication.',
+      'Participated in BlockBash Hackathon with a focus on blockchain solutions.',
+      'Gained hands-on experience in blockchain concepts and collaborative development.',
     ],
-    live: 'https://flicktalesblogs.vercel.app',
-    github: 'https://github.com/MKG0007/flicktales-cinema-blog',
+  },
+  {
+    id: 4,
+    title: 'Full Stack Web Development – CSE Pathshala',
+    period: 'Jun 2024 – Aug 2024',
+    bullets: [
+      'Completed hands-on full-stack training with the MERN stack (MongoDB, Express.js, React, Node.js).',
+      'Built multiple real-world projects, gaining practical experience in scalable web applications.',
+    ],
   },
 ];
 
@@ -63,19 +55,19 @@ const Experience: React.FC = () => {
   return (
     <section id="experience" className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionTitle title="Projects" subtitle="Selected work" />
+        <SectionTitle title="Experience" subtitle="What I've done so far" />
 
         <div ref={ref} className="mt-12 relative">
           {/* Vertical timeline */}
           <div className="hidden md:block absolute left-1/2 -translate-x-1/2 h-full w-0.5 bg-gray-200 dark:bg-gray-700" />
 
-          {projects.map((p, index) => (
+          {experiences.map((exp, index) => (
             <div
-              key={p.id}
+              key={exp.id}
               className={`mb-12 md:mb-0 relative transition-all duration-700 ${
                 inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
               }`}
-              style={{ transitionDelay: `${index * 120}ms`, minHeight: '220px' }}
+              style={{ transitionDelay: `${index * 120}ms`, minHeight: '200px' }}
             >
               <div className="md:flex md:items-start md:justify-between md:w-full relative">
                 {/* Card */}
@@ -91,72 +83,35 @@ const Experience: React.FC = () => {
                     <div className="p-6">
                       <div className="flex items-start gap-4 mb-4">
                         <div className="w-12 h-12 flex items-center justify-center bg-blue-100 dark:bg-blue-900 rounded-lg">
-                          <Briefcase className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                          {index === 0 ? (
+                            <Code className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                          ) : index === 1 ? (
+                            <Users className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                          ) : index === 2 ? (
+                            <Calendar className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                          ) : (
+                            <GraduationCap className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                          )}
                         </div>
                         <div>
                           <h3 className="text-xl font-bold text-gray-900 dark:text-white">
-                            {p.name}
+                            {exp.title}
                           </h3>
-                          <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 gap-4 mt-1">
-                            <span className="inline-flex items-center">
-                              <Calendar className="w-4 h-4 mr-1" />
-                              {p.period}
-                            </span>
-                            {p.location ? (
-                              <span className="inline-flex items-center">
-                                <MapPin className="w-4 h-4 mr-1" />
-                                {p.location}
-                              </span>
-                            ) : null}
-                          </div>
+                          <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                            {exp.period}
+                          </p>
                         </div>
-                      </div>
-
-                      {/* Tech badges */}
-                      <div className="flex flex-wrap gap-2 mb-4">
-                        {p.tech.map((t) => (
-                          <span
-                            key={t}
-                            className="px-2.5 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300"
-                          >
-                            {t}
-                          </span>
-                        ))}
                       </div>
 
                       {/* Bullets */}
                       <ul className="space-y-2 text-gray-700 dark:text-gray-300">
-                        {p.bullets.map((b, i) => (
+                        {exp.bullets.map((b, i) => (
                           <li key={i} className="flex items-start">
                             <span className="mt-2 mr-2 h-1.5 w-1.5 rounded-full bg-blue-600 dark:bg-blue-400"></span>
                             <span>{b}</span>
                           </li>
                         ))}
                       </ul>
-
-                      {/* CTAs */}
-                      <div className="mt-5 flex flex-wrap gap-3">
-                        {p.live && (
-                          <a
-                            href={p.live}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center px-4 py-2 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white text-sm font-medium hover:opacity-90 transition"
-                          >
-                            Live Demo
-                          </a>
-                        )}
-                        {p.github && (
-                          <a
-                            href={p.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 text-sm font-medium text-gray-800 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 transition"
-                          >
-                            GitHub
-                          </a>
-                        )}
-                      </div>
                     </div>
                   </div>
                 </div>
