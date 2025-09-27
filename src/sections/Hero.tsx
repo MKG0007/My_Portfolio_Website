@@ -114,6 +114,7 @@ const Hero: React.FC = () => {
                 className="w-6 h-6 object-contain dark:invert"
               />
             </a>
+            
               <a
                 href="https://auth.geeksforgeeks.org/user/mkgoo7/practice/"
                 target="_blank"
@@ -124,11 +125,9 @@ const Hero: React.FC = () => {
                 <img
                   src="https://upload.wikimedia.org/wikipedia/commons/4/43/GeeksforGeeks.svg"
                   alt="GeeksforGeeks"
-                  className="w-6 h-6 object-contain dark:invert"
+                  className="w-6 h-6 object-contain"
                 />
               </a>
-
-
 
             <a
               href="https://www.linkedin.com/in/mayankgupta30/"
