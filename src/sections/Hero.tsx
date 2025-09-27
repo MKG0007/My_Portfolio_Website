@@ -116,7 +116,7 @@ const Hero: React.FC = () => {
             </a>
             
               <a
-                href="https://auth.geeksforgeeks.org/user/mkgoo7/practice/"
+                href="https://www.geeksforgeeks.org/user/mkg0007/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-white/70 dark:bg-gray-800/70 rounded-full shadow-md hover:shadow-green-500/40 hover:scale-110 transition duration-300 backdrop-blur-lg"
