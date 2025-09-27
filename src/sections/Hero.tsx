@@ -114,6 +114,20 @@ const Hero: React.FC = () => {
                 className="w-6 h-6 object-contain dark:invert"
               />
             </a>
+              <a
+                  href="https://www.geeksforgeeks.org/user/mkg0007"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-white/70 dark:bg-gray-800/70 rounded-full shadow-md hover:shadow-green-500/40 hover:scale-110 transition duration-300 backdrop-blur-lg"
+                  aria-label="GeeksforGeeks"
+                >
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/4/43/GeeksforGeeks.svg"
+                    alt="GeeksforGeeks"
+                    className="w-6 h-6 object-contain"
+                  />
+             </a>
+
 
             <a
               href="https://www.linkedin.com/in/mayankgupta30/"
