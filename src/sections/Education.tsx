@@ -42,7 +42,7 @@ const Education: React.FC = () => {
   });
 
   return (
-    <section id="education" className="py-20 bg-gray-50 dark:bg-gray-950">
+    <section id="education" className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle 
           title="Education" 
