@@ -68,7 +68,7 @@ const Skills: React.FC = () => {
   });
 
   return (
-    <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-900">
+    <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-950">
       <div className="container mx-auto px-6 lg:px-12">
         <SectionTitle
           title="Skills & Expertise"
