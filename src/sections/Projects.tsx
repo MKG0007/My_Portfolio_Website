@@ -110,7 +110,7 @@ const Projects: React.FC = () => {
       : projects;
 
   return (
-    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-950">
+    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle
           title="My Projects"
