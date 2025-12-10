@@ -53,7 +53,7 @@ const Experience: React.FC = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.1 });
 
   return (
-    <section id="experience" className="py-20 bg-gray-50 dark:bg-gray-950">
+    <section id="experience" className="py-20 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle title="Experience" subtitle="What I've done so far" />
 
