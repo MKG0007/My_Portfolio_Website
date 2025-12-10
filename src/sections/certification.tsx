@@ -61,7 +61,7 @@ const Certifications: React.FC = () => {
   });
 
   return (
-    <section id="certifications" className="py-20 bg-white dark:bg-gray-900">
+    <section id="certifications" className="py-20 bg-white dark:bg-gray-950">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <SectionTitle 
           title="Certifications" 
