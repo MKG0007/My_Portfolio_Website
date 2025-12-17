@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
             }`}
             style={{ transitionDelay: "200ms" }}
           >
-            Mayank Kumar Gupta
+            <i>Mayank Kumar Gupta</i>
           </h1>
 
           {/* Type animation */}
